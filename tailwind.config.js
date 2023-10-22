@@ -30,12 +30,14 @@ export default {
         btnBlueDark: "#19509D",
       },
       width: {
+        20: "20px",
         40: "40px",
         150: "150",
         350: "350px",
       },
       height: {
         "h-18": "4.375rem",
+        20: "20px",
         100: "100px",
         250: "250px",
       },

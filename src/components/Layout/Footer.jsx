@@ -18,7 +18,7 @@ export const Footer = () => {
             rel="noreferrer"
             className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
             <svg
-              className="w-5 h-5"
+              className="w-20 h-20"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true">
@@ -36,7 +36,7 @@ export const Footer = () => {
             rel="noreferrer"
             className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
             <svg
-              className="w-5 h-5"
+              className="w-20 h-20"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true">
@@ -50,7 +50,7 @@ export const Footer = () => {
             rel="noreferrer"
             className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
             <svg
-              className="w-5 h-5"
+              className="w-20 h-20"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true">
