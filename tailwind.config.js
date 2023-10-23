@@ -7,19 +7,6 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
-      borderRadius: {
-        0: "0px",
-        5: "5px",
-      },
-      margin: {
-        10: "10px",
-        30: "30px",
-      },
-      spacing: {
-        5: "5px",
-        7: "7px",
-        10: "10px",
-      },
       colors: {
         dark: "#1E293B",
         myRed: "#ac0d14",
