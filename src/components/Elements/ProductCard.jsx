@@ -24,7 +24,7 @@ export const ProductCard = ({ product }) => {
         </p>
 
         <div className='flex items-center my-2'>
-          <Rating />
+          <Rating rating={rating} />
           {/* <i className='text-lg bi bi-star-fill text-yellow-500 mr-1'></i>
           <i className='text-lg bi bi-star-fill text-yellow-500 mr-1'></i>
           <i className='text-lg bi bi-star-fill text-yellow-500 mr-1'></i>
