@@ -13,7 +13,7 @@ export const Header = () => {
               alt="Chapter One: Books Store"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Chapter One: Books Store
+              ChapterOne: Books Store
             </span>
           </Link>
           <div className="flex items-center relative">
