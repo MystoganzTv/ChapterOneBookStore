@@ -6,9 +6,8 @@ import { useTitle } from '../../hooks/useTitle';
 import { useFilter } from '../../context';
 
 export const ProductsList = () => {
-  // const { ProductsList } = useFilter();
+  const { ProductsList, initialProductList } = useFilter();
   const [show, setShow] = useState(false);
-  const [products, setProducts] = useState([]);
   const search = useLocation().search;
   const searchTerm = new URLSearchParams(search).get('q');
 
@@ -21,7 +20,7 @@ export const ProductsList = () => {
         `http://localhost:8000/products?name_like=${searchTerm || ''}`
       );
       const data = await response.json();
-      setProducts(data);
+      initialProductList(data);
     }
     fetchProducts();
   }, []);
@@ -30,7 +29,7 @@ export const ProductsList = () => {
       <section className='my-5'>
         <div className='my-5 flex justify-between'>
           <span className='text-2xl font-semibold dark:text-slate-100 mb-5'>
-            All eBooks (15)
+            All eBooks ({ProductsList.length})
           </span>
           <span>
             <button
@@ -54,7 +53,7 @@ export const ProductsList = () => {
         </div>
 
         <div className='flex flex-wrap justify-center lg:flex-row'>
-          {products.map(product => (
+          {ProductsList.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
