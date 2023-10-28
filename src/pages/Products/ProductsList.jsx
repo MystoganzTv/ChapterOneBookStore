@@ -1,18 +1,19 @@
-import { useState, useEffect } from 'react';
-import { ProductCard } from '../../components';
-import { FilterBar } from './components/FilterBar';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTitle } from '../../hooks/useTitle';
+
+import { ProductCard } from '../../components';
+import { FilterBar } from './components/FilterBar';
+
 import { useFilter } from '../../context';
 
 export const ProductsList = () => {
-  const { ProductsList, initialProductList } = useFilter();
+  const { products, initialProductList } = useFilter();
   const [show, setShow] = useState(false);
   const search = useLocation().search;
   const searchTerm = new URLSearchParams(search).get('q');
-
   useTitle('Explore eBooks Collection');
-  console.log(ProductsList);
+  // console.log(products);
 
   useEffect(() => {
     async function fetchProducts() {
@@ -23,13 +24,13 @@ export const ProductsList = () => {
       initialProductList(data);
     }
     fetchProducts();
-  }, []);
+  }, [searchTerm]); //eslint-disable-line
   return (
     <main>
       <section className='my-5'>
         <div className='my-5 flex justify-between'>
           <span className='text-2xl font-semibold dark:text-slate-100 mb-5'>
-            All eBooks ({ProductsList.length})
+            All eBooks ({products ? products.length : 0})
           </span>
           <span>
             <button
@@ -53,7 +54,7 @@ export const ProductsList = () => {
         </div>
 
         <div className='flex flex-wrap justify-center lg:flex-row'>
-          {ProductsList.map(product => (
+          {products.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

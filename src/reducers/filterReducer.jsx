@@ -1,18 +1,17 @@
-
 export const filterReducer = (state, action) => {
   const { type, payload } = action;
 
   switch (type) {
     case 'PRODUCT_LIST':
-      return { ProductsList: payload.products };
+      return { productList: payload.products };
     case 'SORT_BY':
       return;
     case 'RATINGS':
       return;
     case 'BEST_SELLER_ONLY':
-      return;
+      return { ...state, bestSellerOnly: payload.bestSellerOnly };
     case 'ONLY_IN_STOCK':
-      return;
+      return { ...state, onlyInStock: payload.onlyInStock };
     case 'CLEAR_FILTER':
       return;
 
