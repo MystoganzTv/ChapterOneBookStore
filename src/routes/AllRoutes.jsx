@@ -5,6 +5,7 @@ import {
   ProductsList,
   Login,
   Register,
+  CartPage,
 } from '../pages';
 
 export const AllRoutes = () => {
@@ -16,6 +17,7 @@ export const AllRoutes = () => {
         <Route path='products/:id' element={<ProductDetail />} />
         <Route path='login' element={<Login />} />
         <Route path='register' element={<Register />} />
+        <Route path='cart' element={<CartPage />} />
       </Routes>
     </>
   );
