@@ -23,6 +23,11 @@ export const Login = () => {
     const data = await response.json();
     console.log(data);
     data.accessToken ? navigate('/products') : toast.error(data);
+
+    if (data.accessToken) {
+      sessionStorage.setItem('token', JSON.stringify(data.accessToken));
+      sessionStorage.setItem('coid', JSON.stringify(data.user.id));
+    }
   }
 
   return (
