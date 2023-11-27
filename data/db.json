@@ -289,12 +289,6 @@
       "password": "$2a$10$AFe/7MAI3zEcjDiQWd4DneQQ5ps1grASa.ASlV7W7o2whNzgpL0Gq",
       "name": "Enrique",
       "id": 2
-    },
-    {
-      "email": "pepito@gmail.com",
-      "password": "$2a$10$C.RxSXLCvW41hDlQAWtg1OeXoyIt2qJZlSK04wIKVLxDQ6HoXfQbO",
-      "name": "pepito",
-      "id": 3
     }
   ]
 }
