@@ -325,6 +325,12 @@
       "password": "$2a$10$bctwWb/9O.TPtoz9T4S76eGSWeHQKmQVpLLzsFpGggqzIfglCRLLq",
       "name": "kike",
       "id": 8
+    },
+    {
+      "email": "luis@gmail.com",
+      "password": "$2a$10$RDCCu6WO4LBrtNgMdN9WquhY1n3qx5eux56.YLaWym1kEz7k9GksG",
+      "name": "Luis",
+      "id": 9
     }
   ]
 }
