@@ -23,6 +23,10 @@ export const Checkout = ({ setCheckout }) => {
     getUser();
   }, []);
 
+  function handleOrderSubmit(){
+    
+  }
+
   return (
     <section>
       <div className='fixed top-0 left-0 w-full h-full bg-black bg-opacity-50'></div>
@@ -56,7 +60,7 @@ export const Checkout = ({ setCheckout }) => {
               <h3 className='mb-4 text-xl font-medium text-gray-900 dark:text-white'>
                 <i className='bi bi-credit-card mr-2'></i>CARD PAYMENT
               </h3>
-              <form className='space-y-6'>
+              <form onSubmit={handleOrderSubmit} className='space-y-6'>
                 <div>
                   <label
                     htmlFor='name'
